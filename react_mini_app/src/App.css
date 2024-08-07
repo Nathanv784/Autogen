@@ -18,20 +18,20 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; 
+  height: 100vh; 
 }
 
 .chat-window {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 698px;
-  max-width: 108%;
+  width: 80%;
+  /* max-width: 108%; */
 }
 
 .messages {
   padding: 20px;
-  height: 400px; 
+  height: 750px; 
   overflow-y: auto;
 }
 
@@ -81,4 +81,62 @@ code {
   font-size: 12px; /* Adjust font size as needed */
   color: #666; /* Adjust color as needed */
   margin-top: 10px; /* Add some space above the status */
+}
+
+.chat-static-contents{
+  display: flex;
+      flex-wrap: wrap;
+      margin-right: auto;
+      margin-top: 15px;
+      margin-left: 15px;
+      max-width: 100%;
+}
+
+.chat-static-contents p {
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  line-height: 21px;
+  background: var(--white);
+  display: inline-block;
+  padding: 10px 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  box-shadow: 0px 0 10px rgba(1, 41, 112, 0.1);
+  text-align: left;
+  margin-bottom: 10px;
+  max-width: 80%;
+  overflow-wrap: break-word;
+}
+
+.chat-static-contents-onClick{
+  display: flex;
+      flex-wrap: wrap;
+      margin-right: auto;
+      margin-top: 2px;
+      margin-left: 15px;
+      max-width: 100%;
+      cursor: pointer;
+}
+
+.chat-static-contents-onClick p {
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color:blue;
+  line-height: 21px;
+  background: var(--white);
+  display: inline-block;
+  padding: 10px 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  box-shadow: 0px 0 10px rgba(1, 41, 112, 0.1);
+  text-align: left;
+  margin-bottom: 10px;
+  max-width: 80%;
+  overflow-wrap: break-word;
+  
 }
