@@ -99,9 +99,21 @@ function App() {
     {id:"4",message: "Have you noticed any chest pain, shortness of breath, or palpitations recently? Collapse"}
   ]
 
-  const handleHyperLink = (item) => {
-    setUserInput(item);
-  }
+  const handleHyperLink = async(item) => {
+    try {
+      const response = await fetch("http://localhost:5008/api/get_message");
+      if (!response.ok) {
+        throw new Error("Failed to fetch messages");
+      }
+
+      const data = await response.json();
+      if (data.message) {
+        setMessages([...messages, item]);
+      }
+      setChatStatus(data.chat_status);
+    } catch (error) {
+      console.error("Error fetching messages:", error);
+    }  }
   const handleClear = () => {
     setUserInput('');
   }
